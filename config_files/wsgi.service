@@ -1,0 +1,13 @@
+[Unit]
+Description=My test project
+After=network.target
+
+[Service]
+User=nikita
+Group=www-data
+WorkingDirectory=/home/nikita/itob-task
+Environment="PATH=/home/nikita/itob-task/venv/bin"
+ExecStart=/usr/bin/python3 /home/nikita/itob-task/app.py
+
+[Install]
+WantedBy=multi-user.target 
