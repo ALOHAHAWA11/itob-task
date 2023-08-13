@@ -1,9 +1,0 @@
-[Unit]
-Description=Test wsgi
-After=network.target
-[Service]
-WorkingDirectory=/home/nikita/tasks
-Environment="PATH=/home/nikita/tasks/venv/bin"
-ExecStart=/home/nikita/tasks/venv/bin/uwsgi --ini wsgi.ini --http-socket :8000 -H ./venv
-[Install]
-WantedBy=multi-user.target
